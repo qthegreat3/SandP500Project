@@ -25,7 +25,7 @@ import org.omg.CORBA.Environment;
  * Hello world!
  *
  */
-public class App {
+public class SP500TickerListGenerator {
 	public static void main(String[] args) {
 		// get list of tickers
 		try {
@@ -122,10 +122,10 @@ public class App {
 		List<MarketCapMarker> sAndP500Symbols = new ArrayList<MarketCapMarker>();
 
 		for (String symbol : symbols) {
-			sAndP500Symbols.add(new App.MarketCapMarker(symbol, marketCapMap.get(symbol)));
+			sAndP500Symbols.add(new SP500TickerListGenerator.MarketCapMarker(symbol, marketCapMap.get(symbol)));
 		}
 
-		Collections.sort(sAndP500Symbols, new App.MarketCapMarkerComparer());
+		Collections.sort(sAndP500Symbols, new SP500TickerListGenerator.MarketCapMarkerComparer());
 
 		return sAndP500Symbols;
 	}

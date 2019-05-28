@@ -11,7 +11,7 @@ import java.util.UUID;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
-public class UUIDGenerator {
+public class SP500TickerListStripperAndFilePrinter {
 
 	public static void main(String[] args) throws IOException {
 		String uuid = UUID.randomUUID().toString();
